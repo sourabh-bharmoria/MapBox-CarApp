@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MapBox CarApp</string>
+    <string name="permission_denied">"Permission Denied"</string>
+    <string name="fallback_default_location">"Falling to default location delhi"</string>
+    <string name="fetching_location">"Fetching Location…"</string>
+</resources>
