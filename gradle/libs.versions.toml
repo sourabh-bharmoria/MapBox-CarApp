@@ -29,12 +29,13 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.8.2" }
-androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.6.2" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.9.2" }
 car-app = {group = "androidx.car.app", name = "app", version.ref = "carApp"}
 car-app-automotive = {group = "androidx.car.app", name = "app-automotive", version.ref = "carApp"}
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "play_service_location"}
 mapbox-core = { group = "com.mapbox.maps", name = "android", version = "11.3.0" }
 mapbox-auto = { group = "com.mapbox.navigationcore", name = "android-auto-components", version.ref = "mapbox-auto"}
+
 
 
 [plugins]

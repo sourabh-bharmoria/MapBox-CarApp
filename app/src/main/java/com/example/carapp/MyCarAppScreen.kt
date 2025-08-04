@@ -6,10 +6,14 @@ import android.util.Log
 import androidx.car.app.CarContext
 import androidx.car.app.CarToast
 import androidx.car.app.Screen
+import androidx.car.app.model.Action
+import androidx.car.app.model.ActionStrip
+import androidx.car.app.model.CarColor
 import androidx.car.app.model.Pane
 import androidx.car.app.model.PaneTemplate
 import androidx.car.app.model.Row
 import androidx.car.app.model.Template
+import androidx.car.app.navigation.model.NavigationTemplate
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.LocationServices
 
@@ -58,7 +62,7 @@ class MyCarAppScreen(carContext: CarContext, private val surfaceRenderer: Mapbox
                 if (location != null) {
                     lat = location.latitude
                     lon = location.longitude
-                    Log.d(TAG, "Location: $lat , $lon")
+                    Log.d(TAG, carContext.getString(R.string.location))
                     invalidate()
                 } else {
                     lat = 28.6139
@@ -80,18 +84,28 @@ class MyCarAppScreen(carContext: CarContext, private val surfaceRenderer: Mapbox
 
         val currentLat = lat ?: 28.6139
         val currentLon = lon ?: 77.2090
-        Log.d(TAG, "Fetching Location $currentLat, $currentLon")
+        Log.d(TAG, carContext.getString(R.string.fetched_location))
         surfaceRenderer.updateUserLocation(currentLat, currentLon)
 
 
-        return PaneTemplate.Builder(
-            Pane.Builder()
-                .addRow(
-                    Row.Builder().setTitle(carContext.getString(R.string.app_name)).build()
-                )
-                .build()
-        ).build()
+        return NavigationTemplate.Builder()
+            .setActionStrip(
+                ActionStrip.Builder()
+                    .addAction(
+                        Action.Builder()
+                            .setTitle(carContext.getString(R.string.options))
+                            .setOnClickListener {
+                            }
+                            .build()
+                    )
+                    .build()
+            )
+            .setBackgroundColor(CarColor.BLUE)
+            .build()
+
 
 
     }
+
+
 }

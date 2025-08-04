@@ -3,4 +3,11 @@
     <string name="permission_denied">"Permission Denied"</string>
     <string name="fallback_default_location">"Falling to default location delhi"</string>
     <string name="fetching_location">"Fetching Location…"</string>
+    <string name="location">"Location: %1$.6f, %2$.6f"</string>
+    <string name="fetched_location">""Fetching Location %1$.6f, %2$.6f"</string>
+    <string name="options">"Options"</string>
+    <string name="map_loaded">"Map Loaded"</string>
+    <string name="map_loading">"Map Loading...."</string>
+    <string name="surface_available">"Surface Available Called"</string>
+    <string name="public_token">"pk.eyJ1Ijoic2hpdmFta2Fwb29yMjMiLCJhIjoiY2p1anJycWs2MGp3ZzQ0bGxkYTI5Y3p2NiJ9.GLtY02WR0WXj8nO0PPzNJA"</string>
 </resources>

@@ -7,7 +7,6 @@ import androidx.car.app.Session
 
 class MyCarAppSession: Session() {
 
-
     override fun onCreateScreen(intent: Intent): Screen {
 
         val surfaceRenderer = MapboxRenderer(carContext, lifecycle)
